@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="RunTestExercise2" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.udacity.jdnd.course1.Course1Application" />
+    <module name="course1" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
