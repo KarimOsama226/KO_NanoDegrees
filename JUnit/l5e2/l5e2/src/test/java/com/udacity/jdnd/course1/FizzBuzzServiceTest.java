@@ -34,4 +34,17 @@ class FizzBuzzServiceTest {
 		assertThrows(IllegalArgumentException.class, () -> fbs.fizzBuzz(0));
 		assertThrows(IllegalArgumentException.class, () -> fbs.fizzBuzz(-1));
 	}
+	@Test
+	void testBuzzFizz(){
+		FizzBuzzService fbs = new FizzBuzzService();
+
+		// check non-divisible numbers return themselves
+		assertEquals(10, fbs.buzzFizz("Fizz",2));
+		assertEquals(6, fbs.buzzFizz("Buzz",2));
+		assertEquals(15, fbs.buzzFizz("FizzBuzz",3));
+
+		//check invalid inputs
+		assertThrows(IllegalArgumentException.class, () -> fbs.buzzFizz("Fizz",-5));
+		assertThrows(IllegalArgumentException.class, () -> fbs.buzzFizz("Buzz",0));
+	}
 }
