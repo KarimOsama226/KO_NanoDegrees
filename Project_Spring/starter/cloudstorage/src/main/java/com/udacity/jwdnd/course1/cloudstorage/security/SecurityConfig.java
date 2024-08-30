@@ -30,8 +30,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated();
         http.formLogin()
                 .loginPage("/login")
+                .failureUrl("/login?error=true")  // Redirects to log in with error parameter on failure
                 .permitAll();
         http.formLogin()
                 .defaultSuccessUrl("/home", true);
+        http.logout()
+                .logoutUrl("/logout")  // Specify the path to the logout URL
+                .logoutSuccessUrl("/login")  // Redirect to the login page with a logout message
+                .permitAll();  // Allow everyone to log out
     }
 }

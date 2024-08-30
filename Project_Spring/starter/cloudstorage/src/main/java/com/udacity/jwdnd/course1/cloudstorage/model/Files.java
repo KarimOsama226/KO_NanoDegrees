@@ -5,6 +5,8 @@ public class Files {
     private String fileName;
     private String contentType;
     private String fileSize;
+    private byte[] fileData;
+    private int userId;
 
     public int getFileId() {
         return fileId;
@@ -45,6 +47,12 @@ public class Files {
     public void setFileData(byte[] fileData) {
         this.fileData = fileData;
     }
+    public int getUserId() {
+        return userId;
+    }
 
-    private byte[] fileData;
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
 }

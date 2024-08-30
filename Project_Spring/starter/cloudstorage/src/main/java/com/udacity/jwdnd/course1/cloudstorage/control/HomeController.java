@@ -1,15 +1,23 @@
 package com.udacity.jwdnd.course1.cloudstorage.control;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/Home")
+@RequestMapping("/home")
 public class HomeController {
 
     @GetMapping()
-    public String homeView() {
-        return "Home";
+    public String homeView(Model model) {
+        return "home";
+    }
+    @PostMapping()
+    public String userActivity (Model moder)
+    {
+
+        return "home";
     }
 }

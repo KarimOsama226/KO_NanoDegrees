@@ -16,6 +16,7 @@ public class UserService {
     }
 
     public boolean isUsernameAvailable(String username) {
+        System.out.println("Hi from there! ");
         return userMapper.getUser(username) == null;
     }
 
@@ -26,7 +27,6 @@ public class UserService {
         random.nextBytes(salt);
         String encodedSalt = Base64.getEncoder().encodeToString(salt);
         String hashedPassword = hashService.getHashedValue(user.getPassword(), encodedSalt);
-        System.out.println(user.getUsername() + "\n" + encodedSalt + "\n" + hashedPassword + "\n" + user.getFirstName() + "\n" + user.getLastName());
         return userMapper.insert(new User(null, user.getUsername(), encodedSalt, hashedPassword, user.getFirstName(), user.getLastName()));
     }
     public User getUser(String username) {
