@@ -3,15 +3,21 @@ package com.udacity.jwdnd.course1.cloudstorage.services;
 import com.udacity.jwdnd.course1.cloudstorage.model.Files;
 import org.apache.ibatis.annotations.*;
 
+import java.util.List;
+
 @Mapper
 public interface FilesMapper {
-    @Select("SELECT * FROM FILES WHERE username = #{fileName}")
-    Files getFile(String fileName);
+    @Select("SELECT * FROM FILES WHERE userid = #{userId}")
+    List<Files> getAllFiles(Integer userId);
+    @Select("SELECT * FROM FILES WHERE fileId = #{fileId}")
+    Files getFile(Integer fileId);
+    @Select("SELECT * FROM FILES WHERE filename = #{fileName}")
+    Files getFileByName(String filename);
     @Insert("INSERT INTO FILES (filename, contenttype,filesize,userid) VALUES(#{fileName}, #{contentType}, #{fileSize}, #{userid}")
     @Options(useGeneratedKeys = true, keyProperty = "fileId")
     int insertFile(Files file);
-    @Delete("DELETE FROM FILES WHERE fileId = #{fileId}")
-    int deleteFile(String noteTitle);
+    @Delete("DELETE FROM FILES WHERE filename = #{fileName}")
+    int deleteFile(String fileName);
     @Update("UPDATE FILES SET filename = #{filename}, contenttype = #{contenttype}, filesize = #{filesize}, filedata = #{filedata}, userid = #{userid} WHERE fileId = #{fileId}")
     int updateFile(Files file);
 }

@@ -1,14 +1,23 @@
 package com.udacity.jwdnd.course1.cloudstorage.model;
 
 public class Files {
-    private int fileId ;
+    private Integer fileId ;
     private String fileName;
     private String contentType;
     private String fileSize;
     private byte[] fileData;
     private int userId;
 
-    public int getFileId() {
+    public Files(Integer fileId , byte[] fileData, String fileSize, String contentType, String fileName, int userId) {
+        this.fileId = fileId;
+        this.userId = userId;
+        this.fileData = fileData;
+        this.fileSize = fileSize;
+        this.contentType = contentType;
+        this.fileName = fileName;
+    }
+
+    public Integer getFileId() {
         return fileId;
     }
 

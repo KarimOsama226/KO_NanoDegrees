@@ -38,5 +38,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .logoutUrl("/logout")  // Specify the path to the logout URL
                 .logoutSuccessUrl("/login")  // Redirect to the login page with a logout message
                 .permitAll();  // Allow everyone to log out
+        http.csrf().disable(); // For Testing why Post is not propagated to the App
+
     }
 }
