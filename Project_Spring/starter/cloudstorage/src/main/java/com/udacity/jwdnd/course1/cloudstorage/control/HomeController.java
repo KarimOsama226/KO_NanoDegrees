@@ -9,7 +9,6 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.security.core.Authentication;
@@ -17,6 +16,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 @Controller
@@ -61,12 +61,12 @@ public class HomeController {
         model.addAttribute("activeTab", tab);
         return "home";
     }
-    @PostMapping("/home")
-    public String logoutFromHome() {
-        // Handle file upload logic
+    @PostMapping("/logout")
+    public String logoutFromHome(HttpServletRequest request) {
         System.out.println("Logging Out");
-
-        return "redirect:/login";
+        // Invalidate the session
+        request.getSession().invalidate();
+        return "redirect:/login";  // Redirect to login or another page after logout
     }
     // Handle file upload
     @PostMapping("/upload-file")
