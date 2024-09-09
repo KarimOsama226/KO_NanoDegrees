@@ -10,13 +10,17 @@ import java.util.List;
 public interface CredentialsMapper {
     @Select("SELECT * FROM CREDENTIALS WHERE userid = #{userId}")
     List<Credentials> getAllCredential(Integer userId);
+
     @Select("SELECT * FROM CREDENTIALS WHERE credentialid = #{credentialId}")
     Credentials getCredentialById(int credentialId);
-    @Insert("INSERT INTO CREDENTIALS (url,key,username,password, userid) VALUES(#{url}, #{key}, #{username}, #{password}, #{userId}")
-    @Options(useGeneratedKeys = true, keyProperty = "credentialid")
-    int insertCredential(Credentials Credential);
-    @Delete("DELETE FROM CREDENTIALS WHERE credentialid = #{credentialid}")
+
+    @Insert("INSERT INTO CREDENTIALS (url,key,username,password, userid) VALUES(#{url}, #{key}, #{username}, #{password}, #{userId})")
+    @Options(useGeneratedKeys = true, keyProperty = "credentialId")
+    int insertCredential(Credentials credential);
+
+    @Delete("DELETE FROM CREDENTIALS WHERE credentialid = #{credentialId}")
     int deleteCredential(Integer credentialId);
-    @Update("UPDATE NOTES SET (url,key,username,password, userid) VALUES(#{url}, #{key}, #{username}, #{password}, #{userId}, #{userId} WHERE credentialid = #{credentialid}")
-    int updateCred(Credentials Credential);
+
+    @Update("UPDATE CREDENTIALS SET url = #{url}, key = #{key}, username = #{username}, password = #{password}, userid = #{userId} WHERE credentialid = #{credentialId}")
+    int updateCred(Credentials credential);
 }

@@ -15,11 +15,9 @@ public class FileService {
         this.filesMapper = filesMapper;
     }
     public List<Files> getAllFiles(Integer userId) {
-        System.out.println("Searching userId = " + userId);
         return filesMapper.getAllFiles(userId);
     }
     public Files getFileByName(Integer fileId) {
-        System.out.println("Searching fileId = " + fileId);
         return filesMapper.getFile(fileId);
     }
 
@@ -28,7 +26,7 @@ public class FileService {
         System.out.println("Creating File  "+ file.getFileName());
         if (filesMapper.getFileByName(file.getFileName()) == null)
         {
-            return filesMapper.insertFile (new Files (null, file.getFileData(),file.getFileSize(),file.getContentType(),file.getFileName(), file.getUserId()));
+            return filesMapper.insertFile (new Files (null,file.getFileName(),file.getContentType(),file.getFileSize(), file.getUserId(), file.getFileData()));
 
         }
         else {
@@ -39,12 +37,11 @@ public class FileService {
     public int updateFile(Files file)
     {
         System.out.println("Edit File  "+ file.getFileName());
-        return filesMapper.updateFile (new Files (null, file.getFileData(),file.getFileSize(),file.getContentType(),file.getFileName(),file.getUserId()));
+        return filesMapper.updateFile (new Files (null, file.getFileName(),file.getContentType(),file.getFileSize(), file.getUserId(), file.getFileData()));
     }
-    public int deleteFile(Files file)
+    public int deleteFile(Integer fileId)
     {
-        System.out.println("Delete File  "+ file.getFileName());
-        return filesMapper.deleteFile(file.getFileName());
+        return filesMapper.deleteFile(fileId);
     }
 
 }

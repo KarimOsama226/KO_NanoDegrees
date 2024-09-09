@@ -18,7 +18,7 @@ public class CredentialsServices {
         this.EncrypService = EncrypService;
     }
     public List<Credentials> getCredByUser(Integer userId) {
-        System.out.println("Searching Cred for ID = " + userId);
+
         return CredMapper.getAllCredential(userId);
     }
     public Credentials getCredById(Integer credId) {
@@ -31,31 +31,22 @@ public class CredentialsServices {
     public int addCred(Credentials cred)
     {
         System.out.println("Creating cred  "+ cred.getUrl());
-        /*
-        if (CredMapper.getCredential(cred.getUserId()) == null)
-        {
-            return CredMapper.insertNote (new Credentials (null,note.getUserId(),note.getNoteTitle(),note.getNoteDescription() ));
-
-        }
-        else {
-            System.out.println("Failed Creating Note  "+ note.getNoteTitle() + " Already exists");
-            return -100;
-        }
-         */
         String encodedKey = EncrypService.generateKey();
+        System.out.println("The Key is " + encodedKey);
         cred.setKey(encodedKey);
         cred.setPassword(EncrypService.encryptValue(cred.getPassword(),cred.getKey()));
-        return CredMapper.insertCredential (new Credentials(null, cred.getUrl(), cred.getKey(), cred.getUsername(), cred.getPassword(), cred.getUserId()));
+        return CredMapper.insertCredential (new Credentials(null, cred.getUrl(), cred.getUsername(),cred.getKey(), cred.getPassword(), cred.getUserId()));
     }
-    public int updateFile(Credentials cred)
+    public int updateCred(Credentials cred)
     {
         System.out.println("Edit Cred  "+ cred.getUrl());
-        return CredMapper.updateCred (new Credentials (null, cred.getUrl(), cred.getKey(), cred.getUsername(), cred.getPassword(), cred.getUserId()));
+        System.out.println("With Cred  "+ cred.getKey());
+        return CredMapper.updateCred (new Credentials (cred.getCredentialId()   , cred.getUrl(), cred.getUsername(), cred.getKey(), cred.getPassword(), cred.getUserId()));
     }
-    public int deleteFile(Credentials cred)
+    public int deletecCedential(int credId)
     {
-        System.out.println("Delete Cred  "+ cred.getUrl());
-        return CredMapper.deleteCredential(cred.getCredentialId());
+        System.out.println("Delete Cred  "+ credId);
+        return CredMapper.deleteCredential(credId);
     }
 
 }

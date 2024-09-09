@@ -16,7 +16,6 @@ public class UserService {
     }
 
     public boolean isUsernameAvailable(String username) {
-        System.out.println("Hi from there! ");
         return userMapper.getUser(username) == null;
     }
 

@@ -6,11 +6,9 @@ public class Credentials {
     private String key;
     private String username;
     private String password;
-
-
     private Integer userId;
 
-    public Credentials(Integer credentialId, String url, String key, String username, String password, int userId) {
+    public Credentials(Integer credentialId, String url, String username, String key, String password, Integer userId) {
         this.credentialId = credentialId;
         this.url = url;
         this.key = key;
@@ -55,7 +53,7 @@ public class Credentials {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 

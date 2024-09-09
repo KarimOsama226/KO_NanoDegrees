@@ -13,11 +13,11 @@ public interface FilesMapper {
     Files getFile(Integer fileId);
     @Select("SELECT * FROM FILES WHERE filename = #{fileName}")
     Files getFileByName(String filename);
-    @Insert("INSERT INTO FILES (filename, contenttype,filesize,userid) VALUES(#{fileName}, #{contentType}, #{fileSize}, #{userid}")
+    @Insert("INSERT INTO FILES (filename, contenttype,filesize,userid, filedata) VALUES(#{fileName}, #{contentType}, #{fileSize}, #{userId}, #{fileData})")
     @Options(useGeneratedKeys = true, keyProperty = "fileId")
     int insertFile(Files file);
-    @Delete("DELETE FROM FILES WHERE filename = #{fileName}")
-    int deleteFile(String fileName);
-    @Update("UPDATE FILES SET filename = #{filename}, contenttype = #{contenttype}, filesize = #{filesize}, filedata = #{filedata}, userid = #{userid} WHERE fileId = #{fileId}")
+    @Delete("DELETE FROM FILES WHERE fileId = #{fileId}")
+    int deleteFile(Integer fileId);
+    @Update("UPDATE FILES SET filename = #{filename}, contenttype = #{contenttype}, filesize = #{filesize}, filedata = #{fileData}, userid = #{userId} WHERE fileId = #{fileId}")
     int updateFile(Files file);
 }
