@@ -28,6 +28,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/signup", "/css/**", "/js/**")
                 .permitAll()
                 .anyRequest().authenticated();
+        // Configure what happens for unrecognized URLs
+/*        http.authorizeRequests()
+                .antMatchers("/**")  // Match any URL not previously matched
+                .permitAll();  // Permit access to unrecognized URLs
+
+ */
         http.formLogin()
                 .loginPage("/login")
                 .failureUrl("/login?error=true")  // Redirects to log in with error parameter on failure
