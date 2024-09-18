@@ -4,17 +4,19 @@ import com.coxautodev.graphql.tools.GraphQLMutationResolver;
 import com.udacity.bootstrap.Entity.Dog;
 import com.udacity.bootstrap.Repository.DogRepository;
 import com.udacity.bootstrap.Services.DogNotFoundException;
+import org.springframework.stereotype.Component;
 
 import java.util.Optional;
-
+@Component
 public class Mutation implements GraphQLMutationResolver {
     DogRepository dogRepository;
     public Mutation(DogRepository dogRepository) {
         this.dogRepository = dogRepository;
     }
-    public void deleteDogBreed (Long id)
+    public Boolean deleteDogBreed (Long id)
     {
         dogRepository.deleteById(id);
+        return true;
     }
     public Dog updateDogName (String name,Long id)
     {
