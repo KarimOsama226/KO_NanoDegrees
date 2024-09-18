@@ -21,6 +21,7 @@ public class Mutation implements GraphQLMutationResolver {
     public Dog updateDogName (String name,Long id)
     {
         Optional <Dog> optionalDog = dogRepository.findById(id);
+        System.out.println("ID= " + id + "Name= " + name);
         if(optionalDog.isPresent())
         {
             Dog dog = optionalDog.get();
