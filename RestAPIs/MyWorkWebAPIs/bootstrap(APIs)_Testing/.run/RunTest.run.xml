@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="RunTest" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.udacity.bootstrap.DogApiApplication" />
+    <module name="bootstrap" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
