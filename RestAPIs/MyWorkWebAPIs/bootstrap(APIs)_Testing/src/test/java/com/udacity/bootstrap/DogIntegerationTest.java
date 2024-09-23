@@ -32,4 +32,10 @@ public class DogIntegerationTest {
         ResponseEntity <List> response = this.restTemplate.getForEntity("http://localhost:"+port+"/dogs", List.class);
         MatcherAssert.assertThat(response.getStatusCode(), CoreMatchers.equalTo(HttpStatus.OK));
     }
+    @Test
+    public void getDogNames()
+    {
+        ResponseEntity <List> response = this.restTemplate.getForEntity("http://localhost:"+port+"/dogs/name", List.class);
+        MatcherAssert.assertThat(response.getStatusCode(), CoreMatchers.equalTo(HttpStatus.OK));
+    }
 }
