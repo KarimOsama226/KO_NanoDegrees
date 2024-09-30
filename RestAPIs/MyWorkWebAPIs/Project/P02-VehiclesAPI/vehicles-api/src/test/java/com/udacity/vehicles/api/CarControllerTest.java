@@ -2,6 +2,7 @@ package com.udacity.vehicles.api;
 
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.is;
+import static org.mockito.AdditionalMatchers.not;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
@@ -33,6 +34,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.ResultMatcher;
 
 /**
  * Implements testing of the CarController class.
@@ -92,11 +94,25 @@ public class CarControllerTest {
     @Test
     public void listCars() throws Exception {
         /**
-         * TODO: Add a test to check that the `get` method works by calling
+         * Done: Add a test to check that the `get` method works by calling
          *   the whole list of vehicles. This should utilize the car from `getCar()`
          *   below (the vehicle will be the first in the list).
          */
-
+        createCar();
+        mvc.perform(get("/cars"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$._embedded.carList[0].location.lat").value(40.73061))
+                .andExpect(jsonPath("$._embedded.carList[0].location.lon").value(-73.935242))
+                .andExpect(jsonPath("$._embedded.carList[0].details.manufacturer.name").value("Chevrolet"))
+                .andExpect(jsonPath("$._embedded.carList[0].details.model").value("Impala"))
+                .andExpect(jsonPath("$._embedded.carList[0].details.mileage").value(32280))
+                .andExpect(jsonPath("$._embedded.carList[0].details.externalColor").value("white"))
+                .andExpect(jsonPath("$._embedded.carList[0].details.body").value("sedan"))
+                .andExpect(jsonPath("$._embedded.carList[0].details.engine").value("3.6L V6"))
+                .andExpect(jsonPath("$._embedded.carList[0].details.fuelType").value("Gasoline"))
+                .andExpect(jsonPath("$._embedded.carList[0].details.modelYear").value(2018))
+                .andExpect(jsonPath("$._embedded.carList[0].details.numberOfDoors").value(4))
+                .andExpect(jsonPath("$._embedded.carList[0].condition").value("USED"));
     }
 
     /**
@@ -106,9 +122,25 @@ public class CarControllerTest {
     @Test
     public void findCar() throws Exception {
         /**
-         * TODO: Add a test to check that the `get` method works by calling
+         * Done: Add a test to check that the `get` method works by calling
          *   a vehicle by ID. This should utilize the car from `getCar()` below.
          */
+        Car car = getCar();
+        car = carService.save(car);
+        mvc.perform(get("/cars/"+ car.getId()))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.location.lat").value(40.730610))
+                .andExpect(jsonPath("$.location.lon").value(-73.935242))
+                .andExpect(jsonPath("$.details.manufacturer.name").value("Chevrolet"))
+                .andExpect(jsonPath("$.details.model").value("Impala"))
+                .andExpect(jsonPath("$.details.mileage").value(32280))
+                .andExpect(jsonPath("$.details.externalColor").value("white"))
+                .andExpect(jsonPath("$.details.body").value("sedan"))
+                .andExpect(jsonPath("$.details.engine").value("3.6L V6"))
+                .andExpect(jsonPath("$.details.fuelType").value("Gasoline"))
+                .andExpect(jsonPath("$.details.modelYear").value(2018))
+                .andExpect(jsonPath("$.details.numberOfDoors").value(4))
+                .andExpect(jsonPath("$.condition").value("USED"));
     }
 
     /**
@@ -118,10 +150,19 @@ public class CarControllerTest {
     @Test
     public void deleteCar() throws Exception {
         /**
-         * TODO: Add a test to check whether a vehicle is appropriately deleted
+         * Done: Add a test to check whether a vehicle is appropriately deleted
          *   when the `delete` method is called from the Car Controller. This
          *   should utilize the car from `getCar()` below.
          */
+        Car car = getCar();
+        System.out.println("The ID is " + car.getId() );
+        car = carService.save(car);
+        Long id = car.getId();
+        //carService.delete(id);
+        System.out.println("The deleted ID is " + id );
+        mvc.perform(delete("/cars/"+ id))
+                .andExpect(status().isNoContent());
+
     }
 
     /**
