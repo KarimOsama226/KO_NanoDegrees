@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a368888d-721a-4c94-a881-2bddad88000d" name="Changes" comment="Now working after adding a mapper for the pages" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="AnnotationType" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="JavaAutoRunManager">
+    <enabled-run-configurations>
+      <run-configuration type="JUnit" name="CloudStorageApplicationTests.createCreden" />
+    </enabled-run-configurations>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="alwaysUpdateSnapshots" value="true" />
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+        <option name="printErrorStackTraces" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadAnnotationsAutomatically" value="true" />
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2l929aFMCJbJ83XNRokD6tnjBuz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.RunApp.executor": "Run",
+    "Attach to process.pid 10264.executor": "ProcessAttachDebug",
+    "JUnit.CloudStorageApplicationTests.accessHomePage.executor": "Run",
+    "JUnit.CloudStorageApplicationTests.createCreden.executor": "Run",
+    "JUnit.CloudStorageApplicationTests.deleteCred.executor": "Run",
+    "JUnit.CloudStorageApplicationTests.deleteNotes.executor": "Run",
+    "JUnit.CloudStorageApplicationTests.editCreden.executor": "Run",
+    "JUnit.CloudStorageApplicationTests.editNotes.executor": "Run",
+    "JUnit.CloudStorageApplicationTests.executor": "Run",
+    "JUnit.CloudStorageApplicationTests.fullLogCycle.executor": "Run",
+    "JUnit.CloudStorageApplicationTests.logthenCreatNote.executor": "Run",
+    "JUnit.CloudStorageApplicationTests.testLargeUpload.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Java/SpringBoot/MyWork/RestAPIs/MyWorkWebAPIs/bootstrap",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.udacity.jwdnd.course1.cloudstorage" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.udacity.jwdnd.course1.cloudstorage.control" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.CloudStorageApplicationTests.editCreden">
+    <configuration name="CloudStorageApplicationTests.createCreden" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cloudstorage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.udacity.jwdnd.course1.cloudstorage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.udacity.jwdnd.course1.cloudstorage" />
+      <option name="MAIN_CLASS_NAME" value="com.udacity.jwdnd.course1.cloudstorage.CloudStorageApplicationTests" />
+      <option name="METHOD_NAME" value="createCreden" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CloudStorageApplicationTests.deleteCred" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cloudstorage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.udacity.jwdnd.course1.cloudstorage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.udacity.jwdnd.course1.cloudstorage" />
+      <option name="MAIN_CLASS_NAME" value="com.udacity.jwdnd.course1.cloudstorage.CloudStorageApplicationTests" />
+      <option name="METHOD_NAME" value="deleteCred" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CloudStorageApplicationTests.deleteNotes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cloudstorage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.udacity.jwdnd.course1.cloudstorage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.udacity.jwdnd.course1.cloudstorage" />
+      <option name="MAIN_CLASS_NAME" value="com.udacity.jwdnd.course1.cloudstorage.CloudStorageApplicationTests" />
+      <option name="METHOD_NAME" value="deleteNotes" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CloudStorageApplicationTests.editCreden" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cloudstorage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.udacity.jwdnd.course1.cloudstorage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.udacity.jwdnd.course1.cloudstorage" />
+      <option name="MAIN_CLASS_NAME" value="com.udacity.jwdnd.course1.cloudstorage.CloudStorageApplicationTests" />
+      <option name="METHOD_NAME" value="editCreden" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CloudStorageApplicationTests.editNotes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cloudstorage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.udacity.jwdnd.course1.cloudstorage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.udacity.jwdnd.course1.cloudstorage" />
+      <option name="MAIN_CLASS_NAME" value="com.udacity.jwdnd.course1.cloudstorage.CloudStorageApplicationTests" />
+      <option name="METHOD_NAME" value="editNotes" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CloudStorageApplicationTests.editCreden" />
+        <item itemvalue="JUnit.CloudStorageApplicationTests.deleteCred" />
+        <item itemvalue="JUnit.CloudStorageApplicationTests.createCreden" />
+        <item itemvalue="JUnit.CloudStorageApplicationTests.deleteNotes" />
+        <item itemvalue="JUnit.CloudStorageApplicationTests.editNotes" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a368888d-721a-4c94-a881-2bddad88000d" name="Changes" comment="" />
+      <created>1724577820339</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1724577820339</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Adding the Config and fix an issue">
+      <option name="closed" value="true" />
+      <created>1724593620659</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1724593620659</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Build Successfully (Mappers of Users),&#10;Whitable page not found">
+      <option name="closed" value="true" />
+      <created>1724665111790</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1724665111790</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adding the Config and fix an issue" />
+    <MESSAGE value="Build Successfully (Mappers of Users),&#10;Whitable page not found" />
+    <MESSAGE value="Now working after adding a mapper for the pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Now working after adding a mapper for the pages" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.thymeleaf.exceptions.TemplateInputException" package="org.thymeleaf.exceptions" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NumberFormatException" package="java.lang" />
+          <option name="timeStamp" value="9" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/com/udacity/jwdnd/course1/cloudstorage/CloudStorageApplicationTests.java</url>
+          <line>339</line>
+          <properties class="com.udacity.jwdnd.course1.cloudstorage.CloudStorageApplicationTests" method="deleteNotes">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

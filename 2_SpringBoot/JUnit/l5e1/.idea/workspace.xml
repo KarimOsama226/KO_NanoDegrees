@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4a8c53cb-20b7-4293-849b-0ee5206c1f4e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Data_base_Final_review/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Data_base_Final_review/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2l5zTlN1nu0DyuSMPCP7bmYw9k7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.RunTests.executor": "Run",
+    "JUnit.Course1ApplicationTests.executor": "Run",
+    "JUnit.Course1ApplicationTests.testFizzBuzz.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Java/SpringBoot/MyWork/JUnit/l5e2/l5e2"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.Course1ApplicationTests.testFizzBuzz">
+    <configuration name="Course1ApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="course1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.udacity.jdnd.course1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.udacity.jdnd.course1" />
+      <option name="MAIN_CLASS_NAME" value="com.udacity.jdnd.course1.Course1ApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Course1ApplicationTests.testFizzBuzz" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="course1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.udacity.jdnd.course1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.udacity.jdnd.course1" />
+      <option name="MAIN_CLASS_NAME" value="com.udacity.jdnd.course1.Course1ApplicationTests" />
+      <option name="METHOD_NAME" value="testFizzBuzz" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.RunTests" />
+      <item itemvalue="JUnit.Course1ApplicationTests" />
+      <item itemvalue="JUnit.Course1ApplicationTests.testFizzBuzz" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.Course1ApplicationTests.testFizzBuzz" />
+        <item itemvalue="JUnit.Course1ApplicationTests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4a8c53cb-20b7-4293-849b-0ee5206c1f4e" name="Changes" comment="" />
+      <created>1724484735079</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1724484735079</updated>
+    </task>
+    <servers />
+  </component>
+</project>
