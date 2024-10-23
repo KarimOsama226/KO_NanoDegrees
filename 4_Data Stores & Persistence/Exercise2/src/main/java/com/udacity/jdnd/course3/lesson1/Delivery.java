@@ -1,11 +1,9 @@
 package com.udacity.jdnd.course3.lesson1;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Lob;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Delivery {
@@ -16,6 +14,18 @@ public class Delivery {
     String address;
     LocalDateTime date;
     Boolean isDelivered;
+
+    public List<Plant> getPlant() {
+        return plant;
+    }
+
+    public void setPlant(List<Plant> plant) {
+        this.plant = plant;
+    }
+
+    @OneToMany(mappedBy = "plant")
+    List<Plant> plant;
+
 
     public Long getId() {
         return id;
@@ -33,11 +43,11 @@ public class Delivery {
         this.address = address;
     }
 
-    public Date getDate() {
+    public LocalDateTime getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDateTime date) {
         this.date = date;
     }
 

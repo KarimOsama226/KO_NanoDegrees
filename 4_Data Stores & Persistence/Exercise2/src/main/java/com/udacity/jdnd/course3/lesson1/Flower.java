@@ -7,25 +7,16 @@ import javax.persistence.Id;
 import java.math.BigDecimal;
 
 @Entity
-public class Flower {
-    @Id
-    @GeneratedValue
-    private Long id;
+public class Flower extends Plant {
 
-    public Long getId() {
-        return id;
+    private String color;
+    public Flower()
+    {
+
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public Flower(String color) {
+        this.color = color;
     }
 
     public String getColor() {
@@ -35,17 +26,4 @@ public class Flower {
     public void setColor(String color) {
         this.color = color;
     }
-
-    public BigDecimal getPrice() {
-        return price;
-    }
-
-    public void setPrice(BigDecimal price) {
-        this.price = price;
-    }
-
-    private String name;
-    private String color;
-    @Column(precision = 12, scale = 4)
-    private BigDecimal price;
 }
