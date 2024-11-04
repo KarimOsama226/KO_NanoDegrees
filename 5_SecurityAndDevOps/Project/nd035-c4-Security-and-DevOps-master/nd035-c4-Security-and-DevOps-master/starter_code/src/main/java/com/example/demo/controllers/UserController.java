@@ -14,6 +14,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import com.example.demo.service.JwtUtil;
 
+import java.util.Objects;
+
 
 @RestController
 @RequestMapping("/api/user")
@@ -58,6 +60,12 @@ public class UserController {
     public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
         System.out.println("12Password is : " + createUserRequest.getPassword());
         User user = new User();
+        if(!Objects.equals(createUserRequest.getPassword(), createUserRequest.getConfirmedPassword()) || (createUserRequest.getPassword().length()<7))
+        {
+        logger.error("Password: {} mismatch !", createUserRequest.getPassword());
+            return ResponseEntity.badRequest().build();
+        }
+        else{
         user.setUsername(createUserRequest.getUsername());
         logger.debug("Password: {}", createUserRequest.getPassword());
         System.out.println("Password is : " + createUserRequest.getPassword());
@@ -67,6 +75,7 @@ public class UserController {
         user.setCart(cart);
         userRepository.save(user);
         return ResponseEntity.ok(user);
+        }
     }
 
     @PostMapping ("/login")

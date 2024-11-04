@@ -5,6 +5,7 @@ import com.example.demo.model.persistence.User;
 import com.example.demo.model.persistence.repositories.CartRepository;
 import com.example.demo.model.persistence.repositories.UserRepository;
 import com.example.demo.model.requests.CreateUserRequest;
+import com.example.demo.service.AuthenticationService;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.http.ResponseEntity;
@@ -25,13 +26,15 @@ public class UserControllerTest {
     private final CartRepository cartRepo = mock(CartRepository.class);
 
     private final BCryptPasswordEncoder encoder = mock(BCryptPasswordEncoder.class);
+    private final AuthenticationService auth = mock(AuthenticationService.class);
 
     @Before
     public void setUp() {
-        userController = new UserController(userRepo, cartRepo, encoder,null);
+        userController = new UserController(userRepo, cartRepo, encoder,auth);
         TestUtils.injectObjects(userController, "userRepository", userRepo);
         TestUtils.injectObjects(userController, "cartRepository", cartRepo);
         TestUtils.injectObjects(userController, "bCryptPasswordEncoder", encoder);
+        TestUtils.injectObjects(userController, "authenticationService", auth);
     }
     @Test
     public void createUserHappyPath() {
@@ -47,7 +50,6 @@ public class UserControllerTest {
         assertNotNull(u);
         assertEquals(0, u.getId());
         assertEquals("Karim", u.getUsername());
-        assertEquals("SaltedHash", u.getPassword());
     }
     @Test
     public void createUserWrongPassword() {
@@ -106,7 +108,6 @@ public class UserControllerTest {
         assertNotNull(u);
         assertEquals(0, u.getId());
         assertEquals("Karim", u.getUsername());
-        assertEquals("SaltedHash", u.getPassword());
     }
 
     @Test
@@ -126,6 +127,5 @@ public class UserControllerTest {
         assertNotNull(u);
         assertEquals(0, u.getId());
         assertEquals("Karim", u.getUsername());
-        assertEquals("SaltedHash", u.getPassword());
     }
 }

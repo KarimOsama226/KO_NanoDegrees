@@ -22,3 +22,50 @@
 2024-11-04 15:51:43,434 INFO c.e.d.c.CartController [http-nio-8080-exec-2] Item 3 is Added !
 2024-11-04 15:52:03,890 DEBUG c.e.d.s.JwtAuthorizationFilter [http-nio-8080-exec-6] JWT Filtration ...
 2024-11-04 15:52:03,892 ERROR c.e.d.s.JwtAuthorizationFilter [http-nio-8080-exec-6] Exception Token validation...
+2024-11-04 21:05:52,172 DEBUG c.e.d.c.UserController [main] Password: 123
+2024-11-04 21:05:52,230 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:05:52,237 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:05:52,242 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:05:52,251 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:05:52,257 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:06:10,681 INFO c.e.d.c.CartController [main] Item 0 is Added !
+2024-11-04 21:06:38,132 INFO c.e.d.c.UserController [main] List Found!
+2024-11-04 21:06:38,138 DEBUG c.e.d.c.UserController [main] List Found with size1!
+2024-11-04 21:06:38,161 INFO c.e.d.c.UserController [main] ITEM_FOUNDED.
+2024-11-04 21:06:54,281 INFO c.e.d.c.OrderController [main] The Order has been added successfully.
+2024-11-04 21:06:54,291 DEBUG c.e.d.c.OrderController [main] with items: [com.example.demo.model.persistence.Item@1f]
+2024-11-04 21:06:54,307 INFO c.e.d.c.OrderController [main] History Found!.
+2024-11-04 21:06:54,307 DEBUG c.e.d.c.OrderController [main] Cart is: com.example.demo.model.persistence.Cart@5d1e09bc 
+2024-11-04 21:06:54,314 INFO c.e.d.c.OrderController [main] The Order has been added successfully.
+2024-11-04 21:06:54,314 DEBUG c.e.d.c.OrderController [main] with items: [com.example.demo.model.persistence.Item@1f]
+2024-11-04 21:07:07,396 DEBUG c.e.d.c.UserController [main] Password: 123
+2024-11-04 21:07:07,412 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:07:07,416 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:07:07,419 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:07:07,423 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:07:07,426 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:08:40,344 DEBUG c.e.d.c.UserController [main] Password: 123
+2024-11-04 21:08:40,381 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:08:40,384 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:08:40,386 DEBUG c.e.d.c.UserController [main] Attempt to get User ID 0.
+2024-11-04 21:08:40,392 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:08:40,393 DEBUG c.e.d.c.UserController [main] Getting Username Karim.
+2024-11-04 21:08:40,394 DEBUG c.e.d.c.UserController [main] User Found!
+2024-11-04 21:08:40,397 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:08:40,399 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:09:56,210 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:13:36,162 ERROR c.e.d.c.UserController [main] Password: Admin!123 mismatch !
+2024-11-04 21:15:18,756 ERROR c.e.d.c.UserController [main] Password: Admin!123 mismatch !
+2024-11-04 21:15:29,467 DEBUG c.e.d.c.UserController [main] Password: 123
+2024-11-04 21:17:05,395 ERROR c.e.d.c.UserController [main] Password: 123 mismatch !
+2024-11-04 21:17:14,402 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:17:14,457 DEBUG c.e.d.c.UserController [main] Attempt to get User ID 0.
+2024-11-04 21:17:38,096 ERROR c.e.d.c.UserController [main] Password: 123 mismatch !
+2024-11-04 21:17:38,126 ERROR c.e.d.c.UserController [main] Password: Admin!123 mismatch !
+2024-11-04 21:17:38,130 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:17:38,133 DEBUG c.e.d.c.UserController [main] Attempt to get User ID 0.
+2024-11-04 21:17:38,143 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:17:38,144 DEBUG c.e.d.c.UserController [main] Getting Username Karim.
+2024-11-04 21:17:38,144 DEBUG c.e.d.c.UserController [main] User Found!
+2024-11-04 21:17:38,147 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:17:38,151 DEBUG c.e.d.c.UserController [main] Password: Admin!123
