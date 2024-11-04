@@ -1,0 +1,71 @@
+2024-11-04 15:49:19,226 INFO c.e.d.SareetaApplication [main] Starting SareetaApplication on LPT-5520-KOSAMA with PID 86504 (D:\Java\SpringBoot\MyWork\5_SecurityAndDevOps\Project\nd035-c4-Security-and-DevOps-master\nd035-c4-Security-and-DevOps-master\starter_code\target\classes started by karim.osama in D:\Java\SpringBoot\MyWork\5_SecurityAndDevOps\Project\nd035-c4-Security-and-DevOps-master\nd035-c4-Security-and-DevOps-master\starter_code)
+2024-11-04 15:49:19,239 DEBUG c.e.d.SareetaApplication [main] Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2024-11-04 15:49:19,242 INFO c.e.d.SareetaApplication [main] No active profile set, falling back to default profiles: default
+2024-11-04 15:49:26,844 INFO c.e.d.SareetaApplication [main] Started SareetaApplication in 8.288 seconds (JVM running for 9.887)
+2024-11-04 15:49:55,950 DEBUG c.e.d.s.JwtAuthorizationFilter [http-nio-8080-exec-4] JWT Filtration ...
+2024-11-04 15:49:56,060 DEBUG c.e.d.c.UserController [http-nio-8080-exec-4] Password: HeyYou@123
+2024-11-04 15:49:56,061 INFO c.e.d.s.AuthenticationService [http-nio-8080-exec-4] Salt: $2a$10$8Gv8YufCVriJQhdEJqVCdu
+2024-11-04 15:49:56,062 DEBUG c.e.d.s.AuthenticationService [http-nio-8080-exec-4] rawPassword: HeyYou@123
+2024-11-04 15:49:56,168 DEBUG c.e.d.s.AuthenticationService [http-nio-8080-exec-4] hashedPassword: $2a$10$8Gv8YufCVriJQhdEJqVCduAB4dJwwCew7Z3uYOV86uwt7EWTaaO7S
+2024-11-04 15:49:56,244 ERROR c.e.d.s.JwtAuthorizationFilter [http-nio-8080-exec-4] Token Failure, Invalid Header or prefix
+2024-11-04 15:50:32,851 DEBUG c.e.d.s.JwtAuthorizationFilter [http-nio-8080-exec-5] JWT Filtration ...
+2024-11-04 15:50:33,156 INFO c.e.d.s.JwtUtil [http-nio-8080-exec-5] Generating a Token for Karim
+2024-11-04 15:50:33,192 INFO c.e.d.s.JwtUtil [http-nio-8080-exec-5] Generating a Token for eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLYXJpbSIsImV4cCI6MTczMDgxNDYzMywiaWF0IjoxNzMwNzI4MjMzfQ.NuFyqkNjOmyF78DmSt1BjtusV1zX7RkbCJtyHHys5Jg
+2024-11-04 15:50:33,192 DEBUG c.e.d.c.UserController [http-nio-8080-exec-5] Logged in !, Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLYXJpbSIsImV4cCI6MTczMDgxNDYzMywiaWF0IjoxNzMwNzI4MjMzfQ.NuFyqkNjOmyF78DmSt1BjtusV1zX7RkbCJtyHHys5Jg
+2024-11-04 15:50:33,197 ERROR c.e.d.s.JwtAuthorizationFilter [http-nio-8080-exec-5] Token Failure, Invalid Header or prefix
+2024-11-04 15:50:54,320 DEBUG c.e.d.s.JwtAuthorizationFilter [http-nio-8080-exec-8] JWT Filtration ...
+2024-11-04 15:50:54,343 DEBUG c.e.d.c.UserController [http-nio-8080-exec-8] Getting Username Karim.
+2024-11-04 15:50:54,343 DEBUG c.e.d.c.UserController [http-nio-8080-exec-8] User Found!
+2024-11-04 15:51:19,050 DEBUG c.e.d.s.JwtAuthorizationFilter [http-nio-8080-exec-9] JWT Filtration ...
+2024-11-04 15:51:19,099 INFO c.e.d.c.CartController [http-nio-8080-exec-9] Item 1 is Added !
+2024-11-04 15:51:43,424 DEBUG c.e.d.s.JwtAuthorizationFilter [http-nio-8080-exec-2] JWT Filtration ...
+2024-11-04 15:51:43,434 INFO c.e.d.c.CartController [http-nio-8080-exec-2] Item 3 is Added !
+2024-11-04 15:52:03,890 DEBUG c.e.d.s.JwtAuthorizationFilter [http-nio-8080-exec-6] JWT Filtration ...
+2024-11-04 15:52:03,892 ERROR c.e.d.s.JwtAuthorizationFilter [http-nio-8080-exec-6] Exception Token validation...
+2024-11-04 21:05:52,172 DEBUG c.e.d.c.UserController [main] Password: 123
+2024-11-04 21:05:52,230 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:05:52,237 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:05:52,242 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:05:52,251 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:05:52,257 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:06:10,681 INFO c.e.d.c.CartController [main] Item 0 is Added !
+2024-11-04 21:06:38,132 INFO c.e.d.c.UserController [main] List Found!
+2024-11-04 21:06:38,138 DEBUG c.e.d.c.UserController [main] List Found with size1!
+2024-11-04 21:06:38,161 INFO c.e.d.c.UserController [main] ITEM_FOUNDED.
+2024-11-04 21:06:54,281 INFO c.e.d.c.OrderController [main] The Order has been added successfully.
+2024-11-04 21:06:54,291 DEBUG c.e.d.c.OrderController [main] with items: [com.example.demo.model.persistence.Item@1f]
+2024-11-04 21:06:54,307 INFO c.e.d.c.OrderController [main] History Found!.
+2024-11-04 21:06:54,307 DEBUG c.e.d.c.OrderController [main] Cart is: com.example.demo.model.persistence.Cart@5d1e09bc 
+2024-11-04 21:06:54,314 INFO c.e.d.c.OrderController [main] The Order has been added successfully.
+2024-11-04 21:06:54,314 DEBUG c.e.d.c.OrderController [main] with items: [com.example.demo.model.persistence.Item@1f]
+2024-11-04 21:07:07,396 DEBUG c.e.d.c.UserController [main] Password: 123
+2024-11-04 21:07:07,412 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:07:07,416 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:07:07,419 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:07:07,423 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:07:07,426 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:08:40,344 DEBUG c.e.d.c.UserController [main] Password: 123
+2024-11-04 21:08:40,381 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:08:40,384 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:08:40,386 DEBUG c.e.d.c.UserController [main] Attempt to get User ID 0.
+2024-11-04 21:08:40,392 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:08:40,393 DEBUG c.e.d.c.UserController [main] Getting Username Karim.
+2024-11-04 21:08:40,394 DEBUG c.e.d.c.UserController [main] User Found!
+2024-11-04 21:08:40,397 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:08:40,399 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:09:56,210 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:13:36,162 ERROR c.e.d.c.UserController [main] Password: Admin!123 mismatch !
+2024-11-04 21:15:18,756 ERROR c.e.d.c.UserController [main] Password: Admin!123 mismatch !
+2024-11-04 21:15:29,467 DEBUG c.e.d.c.UserController [main] Password: 123
+2024-11-04 21:17:05,395 ERROR c.e.d.c.UserController [main] Password: 123 mismatch !
+2024-11-04 21:17:14,402 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:17:14,457 DEBUG c.e.d.c.UserController [main] Attempt to get User ID 0.
+2024-11-04 21:17:38,096 ERROR c.e.d.c.UserController [main] Password: 123 mismatch !
+2024-11-04 21:17:38,126 ERROR c.e.d.c.UserController [main] Password: Admin!123 mismatch !
+2024-11-04 21:17:38,130 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:17:38,133 DEBUG c.e.d.c.UserController [main] Attempt to get User ID 0.
+2024-11-04 21:17:38,143 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:17:38,144 DEBUG c.e.d.c.UserController [main] Getting Username Karim.
+2024-11-04 21:17:38,144 DEBUG c.e.d.c.UserController [main] User Found!
+2024-11-04 21:17:38,147 DEBUG c.e.d.c.UserController [main] Password: Admin!123
+2024-11-04 21:17:38,151 DEBUG c.e.d.c.UserController [main] Password: Admin!123
