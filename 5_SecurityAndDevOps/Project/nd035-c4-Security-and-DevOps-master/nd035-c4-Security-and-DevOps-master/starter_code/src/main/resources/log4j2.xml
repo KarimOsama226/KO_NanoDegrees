@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration status="DEBUG">
+
+    <Appenders>
+
+        <!-- Console Appender -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+
+        <!-- File Appender -->
+        <File name="File" fileName="KaOs_Ecommerce.log">
+            <PatternLayout pattern="%d %p %c{1.} [%t] %m%n"/>
+        </File>
+
+    </Appenders>
+
+    <Loggers>
+
+        <!-- Logger for com.example.demo -->
+        <Logger name="com.example.demo" level="debug" additivity="false">
+            <AppenderRef ref="File"/>
+            <AppenderRef ref="Console"/>
+        </Logger>
+
+        <!-- Logger for org.springframework.boot (only logs errors) -->
+        <Logger name="org.springframework.boot" level="error" additivity="false">
+            <AppenderRef ref="Console"/>
+        </Logger>
+
+        <!-- Root Logger (default level: error) -->
+        <Root level="error">
+            <AppenderRef ref="File"/>
+            <AppenderRef ref="Console"/>
+        </Root>
+
+    </Loggers>
+    <RollingFile name="File" fileName="logs/KaOs_Ecommerce.log" filePattern="logs/KaOs_Ecommerce-%d{yyyy-MM-dd}-%i.log.gz">
+        <PatternLayout pattern="%d %p %c{1.} [%t] %m%n"/>
+        <Policies>
+            <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            <SizeBasedTriggeringPolicy size="10MB"/>
+        </Policies>
+    </RollingFile>
+
+</Configuration>

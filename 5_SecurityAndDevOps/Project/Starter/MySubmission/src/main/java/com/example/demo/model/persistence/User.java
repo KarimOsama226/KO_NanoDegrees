@@ -26,7 +26,40 @@ public class User {
 	@Column(nullable = false, unique = true)
 	@JsonProperty
 	private String username;
-	
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	@JsonProperty (access = JsonProperty.Access.WRITE_ONLY)
+	@Column (nullable = false)
+	private String password;
+	private String securedPassword;
+	private String salt;
+
+	public String getSecuredPassword() {
+		return securedPassword;
+	}
+
+	public void setSecuredPassword(String securedPassword) {
+		this.securedPassword = securedPassword;
+	}
+
+	public String getSalt() {
+		return salt;
+	}
+
+	public void setSalt(String salt) {
+		this.salt = salt;
+	}
+
+	public User() {
+	}
+
 	@OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "cart_id", referencedColumnName = "id")
 	@JsonIgnore
