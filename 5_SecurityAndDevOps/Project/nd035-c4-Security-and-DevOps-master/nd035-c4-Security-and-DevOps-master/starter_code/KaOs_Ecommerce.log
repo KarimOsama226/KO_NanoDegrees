@@ -1,0 +1,26 @@
+2024-11-05 10:50:21,217 INFO c.e.d.SareetaApplication [main] Starting SareetaApplication on LPT-5520-KOSAMA with PID 86992 (D:\Java\SpringBoot\MyWork\5_SecurityAndDevOps\Project\nd035-c4-Security-and-DevOps-master\nd035-c4-Security-and-DevOps-master\starter_code\target\classes started by karim.osama in D:\Java\SpringBoot\MyWork\5_SecurityAndDevOps\Project\nd035-c4-Security-and-DevOps-master\nd035-c4-Security-and-DevOps-master\starter_code)
+2024-11-05 10:50:21,224 DEBUG c.e.d.SareetaApplication [main] Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2024-11-05 10:50:21,225 INFO c.e.d.SareetaApplication [main] No active profile set, falling back to default profiles: default
+2024-11-05 10:50:27,419 INFO c.e.d.SareetaApplication [main] Started SareetaApplication in 6.885 seconds (JVM running for 8.572)
+2024-11-05 10:50:35,239 DEBUG c.e.d.s.JwtAuthorizationFilter [http-nio-8080-exec-1] JWT Filtration ...
+2024-11-05 10:50:35,354 DEBUG c.e.d.c.UserController [http-nio-8080-exec-1] Password: HeyYou@123
+2024-11-05 10:50:35,356 INFO c.e.d.s.AuthenticationService [http-nio-8080-exec-1] Salt: $2a$10$iZHsdq0Vi2EHSGbfN9LH2u
+2024-11-05 10:50:35,356 DEBUG c.e.d.s.AuthenticationService [http-nio-8080-exec-1] rawPassword: HeyYou@123
+2024-11-05 10:50:35,500 DEBUG c.e.d.s.AuthenticationService [http-nio-8080-exec-1] hashedPassword: $2a$10$iZHsdq0Vi2EHSGbfN9LH2ud94iIUD0gKqMgBDW.aeCQjtQhSpLnFS
+2024-11-05 10:50:35,602 ERROR c.e.d.s.JwtAuthorizationFilter [http-nio-8080-exec-1] Token Failure, Invalid Header or prefix
+2024-11-05 10:50:43,882 DEBUG c.e.d.s.JwtAuthorizationFilter [http-nio-8080-exec-3] JWT Filtration ...
+2024-11-05 10:50:44,114 ERROR c.e.d.c.UserController [http-nio-8080-exec-3] Invalid Username or Password
+2024-11-05 10:50:44,117 ERROR c.e.d.s.JwtAuthorizationFilter [http-nio-8080-exec-3] Token Failure, Invalid Header or prefix
+2024-11-05 10:54:54,754 INFO c.e.d.SareetaApplication [main] Starting SareetaApplication on LPT-5520-KOSAMA with PID 41756 (D:\Java\SpringBoot\MyWork\5_SecurityAndDevOps\Project\nd035-c4-Security-and-DevOps-master\nd035-c4-Security-and-DevOps-master\starter_code\target\classes started by karim.osama in D:\Java\SpringBoot\MyWork\5_SecurityAndDevOps\Project\nd035-c4-Security-and-DevOps-master\nd035-c4-Security-and-DevOps-master\starter_code)
+2024-11-05 10:54:54,764 DEBUG c.e.d.SareetaApplication [main] Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2024-11-05 10:54:54,765 INFO c.e.d.SareetaApplication [main] No active profile set, falling back to default profiles: default
+2024-11-05 10:55:01,646 INFO c.e.d.SareetaApplication [main] Started SareetaApplication in 7.511 seconds (JVM running for 9.015)
+2024-11-05 10:55:54,093 DEBUG c.e.d.s.JwtAuthorizationFilter [http-nio-8080-exec-4] JWT Filtration ...
+2024-11-05 10:55:54,193 DEBUG c.e.d.c.UserController [http-nio-8080-exec-4] Password: HeyYou@123
+2024-11-05 10:55:54,195 INFO c.e.d.s.AuthenticationService [http-nio-8080-exec-4] Salt: $2a$10$YhYA7EEar4NRGO5Ty/oZ7e
+2024-11-05 10:55:54,196 DEBUG c.e.d.s.AuthenticationService [http-nio-8080-exec-4] rawPassword: HeyYou@123
+2024-11-05 10:55:54,315 DEBUG c.e.d.s.AuthenticationService [http-nio-8080-exec-4] hashedPassword: $2a$10$YhYA7EEar4NRGO5Ty/oZ7eymt0eMyVSb146aRs132XEHcwYTvUd7q
+2024-11-05 10:55:54,646 ERROR c.e.d.s.JwtAuthorizationFilter [http-nio-8080-exec-4] Token Failure, Invalid Header or prefix
+2024-11-05 10:55:57,529 DEBUG c.e.d.s.JwtAuthorizationFilter [http-nio-8080-exec-5] JWT Filtration ...
+2024-11-05 10:55:57,730 ERROR c.e.d.c.UserController [http-nio-8080-exec-5] Invalid Username or Password
+2024-11-05 10:55:57,733 ERROR c.e.d.s.JwtAuthorizationFilter [http-nio-8080-exec-5] Token Failure, Invalid Header or prefix
