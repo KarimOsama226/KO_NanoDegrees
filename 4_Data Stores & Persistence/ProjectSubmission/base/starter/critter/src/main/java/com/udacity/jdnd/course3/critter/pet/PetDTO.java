@@ -1,16 +1,25 @@
 package com.udacity.jdnd.course3.critter.pet;
 
+import com.udacity.jdnd.course3.critter.user.CustomerDTO;
+
+import javax.persistence.*;
 import java.time.LocalDate;
 
 /**
  * Represents the form that pet request and response data takes. Does not map
  * to the database directly.
  */
+@Entity
+@Table(name = "pets")
 public class PetDTO {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Enumerated(EnumType.STRING)  // Maps PetType as a string
     private PetType type;
     private String name;
-    private long ownerId;
+    @Column(name = "owner_id")  // Only storing the ID of the customer
+    private Long ownerId;       // References the ID of CustomerDTO
     private LocalDate birthDate;
     private String notes;
 

@@ -1,17 +1,25 @@
 package com.udacity.jdnd.course3.critter.user;
 
-import java.util.List;
+import com.udacity.jdnd.course3.critter.pet.PetDTO;
 
+import javax.persistence.*;
+import java.util.List;
+@Entity
 /**
  * Represents the form that customer request and response data takes. Does not map
  * to the database directly.
  */
+@Table(name = "customers")
 public class CustomerDTO {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
     private String phoneNumber;
     private String notes;
-    private List<Long> petIds;
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "owner_id")  // Points to the "owner_id" in PetDTO
+    private List<PetDTO> pets;
 
     public long getId() {
         return id;
@@ -45,11 +53,11 @@ public class CustomerDTO {
         this.notes = notes;
     }
 
-    public List<Long> getPetIds() {
-        return petIds;
+    public List<PetDTO> getPetIds() {
+        return pets;
     }
 
-    public void setPetIds(List<Long> petIds) {
-        this.petIds = petIds;
+    public void setPetIds(List<PetDTO> pets) {
+        this.pets = pets;
     }
 }

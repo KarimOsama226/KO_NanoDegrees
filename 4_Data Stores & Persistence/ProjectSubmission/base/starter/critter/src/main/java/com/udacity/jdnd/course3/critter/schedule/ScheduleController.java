@@ -1,5 +1,7 @@
 package com.udacity.jdnd.course3.critter.schedule;
 
+import com.udacity.jdnd.course3.critter.services.ScheduleService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,28 +13,36 @@ import java.util.List;
 @RequestMapping("/schedule")
 public class ScheduleController {
 
-    @PostMapping
-    public ScheduleDTO createSchedule(@RequestBody ScheduleDTO scheduleDTO) {
-        throw new UnsupportedOperationException();
-    }
+        private final ScheduleService scheduleService;
 
-    @GetMapping
-    public List<ScheduleDTO> getAllSchedules() {
-        throw new UnsupportedOperationException();
-    }
+        @Autowired
+        public ScheduleController(ScheduleService scheduleService) {
+            this.scheduleService = scheduleService;
+        }
 
-    @GetMapping("/pet/{petId}")
-    public List<ScheduleDTO> getScheduleForPet(@PathVariable long petId) {
-        throw new UnsupportedOperationException();
-    }
+        @PostMapping
+        public ScheduleDTO createSchedule(@RequestBody ScheduleDTO scheduleDTO) {
+            return scheduleService.createSchedule(scheduleDTO);
+        }
 
-    @GetMapping("/employee/{employeeId}")
-    public List<ScheduleDTO> getScheduleForEmployee(@PathVariable long employeeId) {
-        throw new UnsupportedOperationException();
-    }
+        @GetMapping
+        public List<ScheduleDTO> getAllSchedules() {
+            return scheduleService.getAllSchedules();
+        }
 
-    @GetMapping("/customer/{customerId}")
-    public List<ScheduleDTO> getScheduleForCustomer(@PathVariable long customerId) {
-        throw new UnsupportedOperationException();
+        @GetMapping("/pet/{petId}")
+        public List<ScheduleDTO> getScheduleForPet(@PathVariable long petId) {
+            return scheduleService.getScheduleForPet(petId);
+        }
+
+        @GetMapping("/employee/{employeeId}")
+        public List<ScheduleDTO> getScheduleForEmployee(@PathVariable long employeeId) {
+            System.out.println("Hi there.......");
+            return scheduleService.getScheduleForEmployee(employeeId);
+        }
+
+        @GetMapping("/customer/{customerId}")
+        public List<ScheduleDTO> getScheduleForCustomer(@PathVariable long customerId) {
+            return scheduleService.getScheduleForCustomer(customerId);
+        }
     }
-}
