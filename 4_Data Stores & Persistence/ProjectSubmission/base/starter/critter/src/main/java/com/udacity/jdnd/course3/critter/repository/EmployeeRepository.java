@@ -12,9 +12,11 @@ import java.util.Set;
 
 public interface EmployeeRepository extends JpaRepository<EmployeeDTO, Long> {
     @Query("SELECT e FROM EmployeeDTO e " +
-            "WHERE :skill MEMBER OF e.skills " +
-            "AND :dayOfWeek MEMBER OF e.daysAvailable")
-    List<EmployeeDTO> findEmployeesBySkillsAndAvailability(
+            "JOIN e.skills s " +
+            "JOIN e.daysAvailable d " +
+            "WHERE s = :skill OR d = :dayOfWeek")
+    List<EmployeeDTO> findEmployeesBySkillsOrAvailability(
             @Param("skill") EmployeeSkill skill,
             @Param("dayOfWeek") DayOfWeek dayOfWeek);
+
 }

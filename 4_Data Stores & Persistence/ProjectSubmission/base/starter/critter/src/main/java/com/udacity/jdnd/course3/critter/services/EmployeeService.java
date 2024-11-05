@@ -50,7 +50,7 @@ public class EmployeeService {
         Set<EmployeeDTO> qualifiedEmployees = new HashSet<>();
 
         for (EmployeeSkill skill : request.getSkills()) {
-            List<EmployeeDTO> employees = employeeRepository.findEmployeesBySkillsAndAvailability(skill, dayOfWeek);
+            List<EmployeeDTO> employees = employeeRepository.findEmployeesBySkillsOrAvailability(skill, dayOfWeek);
             qualifiedEmployees.addAll(employees);
         }
         return new ArrayList<>(qualifiedEmployees);

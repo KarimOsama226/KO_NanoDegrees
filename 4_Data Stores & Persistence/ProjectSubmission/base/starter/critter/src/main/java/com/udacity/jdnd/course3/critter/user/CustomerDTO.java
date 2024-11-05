@@ -17,7 +17,7 @@ public class CustomerDTO {
     private String name;
     private String phoneNumber;
     private String notes;
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "owner_id")  // Points to the "owner_id" in PetDTO
     private List<PetDTO> pets;
 
@@ -54,6 +54,7 @@ public class CustomerDTO {
     }
 
     public List<PetDTO> getPetIds() {
+        System.out.println("Pets are: " + pets);
         return pets;
     }
 

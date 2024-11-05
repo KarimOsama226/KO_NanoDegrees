@@ -22,16 +22,19 @@ public class ScheduleController {
 
         @PostMapping
         public ScheduleDTO createSchedule(@RequestBody ScheduleDTO scheduleDTO) {
+            System.out.println("createSchedule");
             return scheduleService.createSchedule(scheduleDTO);
         }
 
         @GetMapping
         public List<ScheduleDTO> getAllSchedules() {
+            System.out.println("getAllSchedules");
             return scheduleService.getAllSchedules();
         }
 
         @GetMapping("/pet/{petId}")
         public List<ScheduleDTO> getScheduleForPet(@PathVariable long petId) {
+            System.out.println("getScheduleForPet");
             return scheduleService.getScheduleForPet(petId);
         }
 
@@ -43,6 +46,7 @@ public class ScheduleController {
 
         @GetMapping("/customer/{customerId}")
         public List<ScheduleDTO> getScheduleForCustomer(@PathVariable long customerId) {
+            System.out.println("getScheduleForCustomer");
             return scheduleService.getScheduleForCustomer(customerId);
         }
     }
