@@ -1,5 +1,6 @@
 package com.udacity.jdnd.course3.critter.repository;
 
+import com.udacity.jdnd.course3.critter.pet.PetDTO;
 import com.udacity.jdnd.course3.critter.schedule.ScheduleDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -15,4 +16,5 @@ public interface ScheduleRepository extends JpaRepository<ScheduleDTO, Long> {
 
     @Query("SELECT s FROM ScheduleDTO s JOIN s.employeeIds e WHERE e = :employeeId")
     List<ScheduleDTO> findByEmployeeIds(Long employeeId);
+
 }

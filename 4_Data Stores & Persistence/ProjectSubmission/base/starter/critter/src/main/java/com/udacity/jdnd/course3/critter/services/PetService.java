@@ -6,9 +6,12 @@ import com.udacity.jdnd.course3.critter.repository.PetRepository;
 import com.udacity.jdnd.course3.critter.user.CustomerDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
+@Transactional
 public class PetService {
     private final PetRepository petRepository;
     private final CustomerRepository customerRepository;
@@ -35,7 +38,11 @@ public class PetService {
         petRepository.deleteById(id);
     }
     public List<PetDTO> getPetsByOwnerId(long ownerId) {
-        return petRepository.findByOwnerId(ownerId);
+        System.out.println("================================================ownerId: " + ownerId);
+        List<PetDTO> pets =  petRepository.findByOwnerId(ownerId);
+        System.out.println("================================================ownerId: " + pets.get(0).getName());
+
+        return pets;
     }
     public List<PetDTO> findPetsByOwnerId(long ownerId) {
         return petRepository.findByOwnerId(ownerId);

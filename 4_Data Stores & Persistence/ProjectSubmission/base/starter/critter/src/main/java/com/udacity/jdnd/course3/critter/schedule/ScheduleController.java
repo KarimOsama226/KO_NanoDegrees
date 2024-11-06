@@ -1,10 +1,15 @@
 package com.udacity.jdnd.course3.critter.schedule;
 
 import com.udacity.jdnd.course3.critter.services.ScheduleService;
+import com.udacity.jdnd.course3.critter.user.EmployeeSkill;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Handles web requests related to Schedules.
@@ -44,9 +49,18 @@ public class ScheduleController {
             return scheduleService.getScheduleForEmployee(employeeId);
         }
 
-        @GetMapping("/customer/{customerId}")
-        public List<ScheduleDTO> getScheduleForCustomer(@PathVariable long customerId) {
-            System.out.println("getScheduleForCustomer");
-            return scheduleService.getScheduleForCustomer(customerId);
+    @GetMapping("/customer/{customerId}")
+    public List<ScheduleDTO> getScheduleForCustomer(@PathVariable long customerId) {
+        if (customerId > 0) {
+            List<ScheduleDTO> scheduleDTOs = scheduleService.getScheduleForCustomer(customerId); // Assume this returns List<ScheduleDTO>
+            if (!scheduleDTOs.isEmpty()) {
+                return scheduleDTOs;
+            } else {
+                throw new UnsupportedOperationException("Customer not found for Id " + customerId);
+            }
+        } else {
+            throw new UnsupportedOperationException();
         }
+    }
+
     }
