@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "3da4eeec-6238-471f-ab55-ce0d742fa76e",
+		"_postman_id": "62b25eeb-0fec-4c4c-890d-58440c7645e8",
 		"name": "Udacity",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38279283"
 	},
 	"item": [
 		{
@@ -12,7 +13,6 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/json",
 						"type": "text"
 					}
@@ -48,7 +48,6 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/json",
 						"type": "text"
 					}
@@ -83,7 +82,6 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/json",
 						"type": "text"
 					}
@@ -113,97 +111,19 @@
 			"response": []
 		},
 		{
-			"name": "Add Employee Schedule",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "[\"MONDAY\", \"TUESDAY\", \"FRIDAY\"]",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8082/user/employee/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8082",
-					"path": [
-						"user",
-						"employee",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Check Availability",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"date\": \"2019-12-17\",\n\t\"skills\": [\"PETTING\", \"FEEDING\"]\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8082/user/employee/availability",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8082",
-					"path": [
-						"user",
-						"employee",
-						"availability"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Create Schedule",
 			"request": {
-				"method": "PUT",
+				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
-						"type": "text",
-						"value": "application/json"
+						"value": "application/json",
+						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "[\"MONDAY\", \"TUESDAY\", \"FRIDAY\"]",
+					"raw": "{\r\n  \"employeeIds\": [1, 2],\r\n  \"petIds\": [101, 102],\r\n  \"date\": \"2024-11-04\",\r\n  \"activities\": [\"PETTING\", \"WALKING\"]\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -211,23 +131,22 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8082/user/employee/1",
+					"raw": "http://localhost:8082/schedule/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8082",
 					"path": [
-						"user",
-						"employee",
-						"1"
+						"schedule",
+						""
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Find Schedule By Pet",
+			"name": "Get Pets By Owner",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -236,9 +155,8 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
-						"type": "text",
-						"value": "application/json"
+						"value": "application/json",
+						"type": "text"
 					}
 				],
 				"body": {
@@ -251,15 +169,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8082/schedule/pet/1",
+					"raw": "http://localhost:8082/pet/owner/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8082",
 					"path": [
-						"schedule",
 						"pet",
+						"owner",
 						"1"
 					]
 				}
@@ -267,7 +185,7 @@
 			"response": []
 		},
 		{
-			"name": "Find Schedule By Employee",
+			"name": "Get Owner By Pet",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -276,14 +194,13 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
-						"type": "text",
-						"value": "application/json"
+						"value": "application/json",
+						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "[\"MONDAY\", \"TUESDAY\", \"FRIDAY\"]",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -291,56 +208,17 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8082/schedule/employee/2",
+					"raw": "http://localhost:8082/user/customer/pet/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8082",
 					"path": [
-						"schedule",
-						"employee",
-						"2"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Find Schedule By Owner",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "[\"MONDAY\", \"TUESDAY\", \"FRIDAY\"]",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8082/schedule/employee/2",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8082",
-					"path": [
-						"schedule",
-						"employee",
-						"2"
+						"user",
+						"customer",
+						"pet",
+						"1"
 					]
 				}
 			},
@@ -356,7 +234,6 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/json",
 						"type": "text"
 					}
@@ -395,7 +272,6 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/json",
 						"type": "text"
 					}
@@ -425,7 +301,7 @@
 			"response": []
 		},
 		{
-			"name": "Get Pets By Owner",
+			"name": "Find Schedule By Employee",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -434,14 +310,13 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
-						"type": "text",
-						"value": "application/json"
+						"value": "application/json",
+						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "",
+					"raw": "[\"MONDAY\", \"TUESDAY\", \"FRIDAY\"]",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -449,23 +324,23 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8082/pet/owner/1",
+					"raw": "http://localhost:8082/schedule/employee/2",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8082",
 					"path": [
-						"pet",
-						"owner",
-						"1"
+						"schedule",
+						"employee",
+						"2"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Get Owner By Pet",
+			"name": "Check Availability",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -474,14 +349,13 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
-						"type": "text",
-						"value": "application/json"
+						"value": "application/json",
+						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "",
+					"raw": "{\n\t\"date\": \"2019-12-17\",\n\t\"skills\": [\"PETTING\", \"FEEDING\"]\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -489,7 +363,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8082/user/customer/pet/1",
+					"raw": "http://localhost:8082/user/employee/availability",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -497,7 +371,45 @@
 					"port": "8082",
 					"path": [
 						"user",
-						"customer",
+						"employee",
+						"availability"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Schedule By Pet",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/schedule/pet/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"schedule",
 						"pet",
 						"1"
 					]
@@ -505,6 +417,5 @@
 			},
 			"response": []
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }
