@@ -79,14 +79,14 @@ class Blockchain:
         """
         Constructs all the necessary attributes for the Blockchain object.
         """
-        pass
+        self.chain=[]
 
     def create_genesis_block(self) -> None:
         """
         Create the genesis block (the first block in the blockchain).
         """
         # Genesis block has no previous hash and empty data
-        pass
+        self.chain.append(Block(datetime.datetime.now,"FirstBlock",'0'))
 
     def add_block(self, data: str) -> None:
         """
@@ -97,7 +97,11 @@ class Blockchain:
         data : str
             The data to be stored in the new block.
         """
-        pass
+        if len(self.chain) == 0:
+            self.create_genesis_block()
+        prevhash = self.chain[-1].hash
+        # print(prevhash)
+        self.chain.append(Block(datetime.datetime.now,data,prevhash))
 
     def __repr__(self) -> str:
         """
@@ -116,15 +120,29 @@ class Blockchain:
 if __name__ == "__main__":
     # Test cases
     # Test Case 1: Create a blockchain and add blocks
-    print("Test Case 1: Basic blockchain functionality")
+    print("\n Test Case 1: Basic blockchain functionality")
     blockchain = Blockchain()
     blockchain.add_block("Block 1 Data")
     blockchain.add_block("Block 2 Data")
     blockchain.add_block("Block 3 Data")
     print(blockchain)
 
-    # Test Case 2
-    pass
+    # Test Case 2: Edge case with empty data
+    print("\n Test Case 2: Adding a block with empty data")
+    blockchain_empty = Blockchain()
+    blockchain_empty.add_block("")  # Add a block with empty string data
+    print(blockchain_empty)
 
-    # Test Case 3
-    pass
+    # Test Case 3: Large data
+    print("\n Test Case 3: Adding a block with very large data")
+    large_data = "Test" * 1000000  # 1 million word
+    blockchain_large = Blockchain()
+    blockchain_large.add_block(large_data)
+    print(f"Block with large data added. Hash: {blockchain_large.chain[-1].hash}")
+
+    # Test Case 4: Adding a block to an uninitialized blockchain
+    print("\n Test Case 4: Adding a block to an uninitialized blockchain")
+    blockchain_uninitialized = Blockchain()
+    print(blockchain_uninitialized)
+    blockchain_uninitialized.add_block("First block after uninitialized")
+    print(blockchain_uninitialized)
