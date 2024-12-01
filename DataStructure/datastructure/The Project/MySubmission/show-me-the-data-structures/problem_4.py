@@ -132,8 +132,26 @@ if __name__ == "__main__":
     print("Test Case 1")
     print(is_user_in_group("sub_child_user", parent))  # Expected output: True
 
-    # Test Case 2
-    pass
+    # Test Case 2: User is in the parent group
+    print("Test Case 2")
+    parent_user = "parent_user"
+    parent.add_user(parent_user)
+    print(is_user_in_group("parent_user", parent))  # Expected output: True
 
-    # Test Case 3
-    pass
+    # Test Case 3: User does not exist in any group
+    print("Test Case 3")
+    print(is_user_in_group("non_existent_user", parent))  # Expected output: False
+
+    # Test Case 4: User is in a deeper nested subgroup
+    print("Test Case 4")
+    sub_sub_child = Group("sub_subchild")
+    deep_nested_user = "deep_nested_user"
+    sub_sub_child.add_user(deep_nested_user)
+    sub_child.add_group(sub_sub_child)
+    print(is_user_in_group("deep_nested_user", parent))  # Expected output: True
+
+    # Test Case 5: Check an empty group
+    print("Test Case 5")
+    empty_group = Group("empty_group")
+    print(is_user_in_group("any_user", empty_group))  # Expected output: False
+    
