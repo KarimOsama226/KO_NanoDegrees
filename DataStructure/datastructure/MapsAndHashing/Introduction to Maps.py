@@ -95,12 +95,62 @@ print (dictionary)
 
 
 # Code
-
+locations = {}
 locations = {'North America': {'USA': ['Mountain View']}}
+# Bangalore (India, Asia)
+# New Delhi (India, Asia)
+# Atlanta (USA, North America)
+# Cairo (Egypt, Africa)
+# Shanghai (China, Asia)
+Africa = {}
+Asia = {}
+Asia['India'] = []
+Asia['India'].append('Bangalore')
+Asia['India'].append('New Delhi')
+Asia['China']=[]
+Asia['China'].append('Shanghai')
+Africa['Egypt']=[]
+Africa['Egypt'].append('Cairo')
+Africa['Egypt'].append('Alexandria')
+Asia['KSA']=[]
+Asia['KSA'].append('Mecca')
+Asia['KSA'].append('Madina')
+NorthAmertica = {}
+NorthAmertica['USA']= 'KFC :D'
+
+locations['Africa'] = Africa
+locations['Asia'] = Asia
+locations['North America'] = NorthAmertica
 
 # TODO: Print a list of all cities in the USA in alphabetic order.
-
+print (locations)
 # TODO: Print all cities in Asia, in alphabetic order, next to the name of the country
+
+
+# Task 1 - Solution
+locations = {'North America': {'USA': ['Mountain View']}}
+locations['North America']['USA'].append('Atlanta')
+locations['Asia'] = {'India': ['Bangalore']}
+locations['Asia']['India'].append('New Delhi')
+locations['Asia']['China'] = ['Shanghai']
+locations['Africa'] = {'Egypt': ['Cairo']}
+
+# Task 2 - Solution
+# Part 1 - A list of all cities in the USA in alphabetic order.
+print (1)
+usa_sorted = sorted(locations['North America']['USA'])
+for city in usa_sorted:
+    print (city)
+
+# Part 2 - All cities in Asia, in alphabetic order
+print (2)
+asia_cities = []
+for country, cities in locations['Asia'].items():
+    for city in cities:
+        asia_cities.append('{} - {}'.format(city, country))
+asia_sorted = sorted(asia_cities)
+for city in asia_sorted:
+    print (city)
 
 
 # <span class="graffiti-highlight graffiti-id_4ar8d9w-id_ft4syq0"><i></i><button>Show Solution</button></span>
